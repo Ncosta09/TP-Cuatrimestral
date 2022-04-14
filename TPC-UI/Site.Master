@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TPC_Ortiz_Costa.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <title>eCommerce</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <style>
+        #page-container {            
+          position: relative;
+          min-height: 100vh;
+        }
+
+        #content-wrap {
+          padding-bottom: 2.5rem;    /* Footer height */
+        }
+
+        #footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2.5rem;            /* Footer height */
+        }
+    </style>
+
+    <form id="form1" runat="server">
+        <header>
+            <div class="wrapper">
+                <div class="section">
+                    <div class="top_navbar blur">
+                        <div class="hamburger">
+                            <a href="#">
+                                <i class="fas fa-bars mx-3"></i>
+                            </a>
+                        </div>
+
+                        <input type="search" class="Search-bar"
+                            placeholder="Buscar Artículo" aria-label="Search" aria-describedby="search-addon" />
+
+                        <button class="Search-btn">
+                            <i class="fas fa-search icon"></i>
+                        </button>
+
+                        <div class="Carrito">
+                            <li class="nav-item">
+
+                                <span class="nav-link navbar-link-2 waves-effect" style="color: #ffffff;">
+
+                                    <a href="Carrito.aspx" style="text-decoration: none;">
+                                        <span class="badge badge-pill red" style="color: #ffffff"><%:Cantidad %></span>
+                                        <i class="fas fa-shopping-cart pl-0 mx-1" style="color: #ffffff"></i>
+                                    </a>
+                                </span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="profile mt-4">
+                        
+                                    <%if (Usuario != null)
+                                        {
+                                    %><p style="color: white;">Bienvenido,</p>
+                                        <a href="Usuario-Perfil.aspx" style="text-decoration: none; color: white;" class="mx-5"><%: Usuario.Username %></a>
+                                    <%
+                                        }
+                                    %>
+
+                    </div>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item circle">
+                            <a href="Catalogo.aspx" style="text-decoration: none !important;">Inicio</a>
+                        </li>
+                        <li class="nav-item circle">
+                            <a href="Contactar.aspx" style="text-decoration: none !important;">Contactar</a>
+                        </li>
+
+                        <%if (Usuario == null)
+                            {%>
+                            <li class="nav-item circle">
+                                <a href="Usuario-Ingresar.aspx" style="text-decoration: none !important;">Ingresar</a>
+                            </li>
+                        <%}%>
+
+                        <%if (Usuario != null)
+                            {%>
+
+                            <%if (Usuario.Tipo == true)
+                                {%>
+                                <li class="nav-item">
+                                    <a href="Admin-Componentes.aspx" style="text-decoration: none !important;">Componentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="Admin-Usuarios.aspx" style="text-decoration: none !important;">Usuarios</a>
+                                </li>
+                               <%}%>
+
+                            <li class="nav-item">
+                                <a href="Usuario-Perfil.aspx" style="text-decoration: none !important;">Perfil</a>
+                            </li>
+                            <li class="nav-item section-logout">
+                                <a href="Catalogo.aspx?Logout=<%:true %>" style="text-decoration: none !important;">Salir</a>
+                            </li>
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            var hamburger = document.querySelector(".hamburger");
+
+            hamburger.addEventListener("click", function () {
+                document.querySelector("body").classList.toggle("active");
+            });
+            document.getElementById("close", function () {
+                defaultSidebar.hide();
+            });
+            document.querySelector("body").classList.toggle("active");
+        </script>
+
+
+        <div>
+            <div class="card border-0 bg" id="page-container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+                <footer class="footer" style="background-color: #35605A;" id="content-wrap footer">
+                    <hr class="text-black-50" style="background-color: #35605A;" />
+                    <p class="text-center my-auto" style="color: white;">&copy; <%: DateTime.Now.Year %> - eCommerce | Costa Nicolás - Ortiz Sebastián</p>
+                </footer>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

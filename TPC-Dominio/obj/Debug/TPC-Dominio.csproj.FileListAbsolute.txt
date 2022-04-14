@@ -1,0 +1,12 @@
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\bin\Debug\TPC-Dominio.dll
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\bin\Debug\TPC-Dominio.pdb
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.csproj.CoreCompileInputs.cache
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.dll
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.pdb
+D:\Archivos de programa\Desktop\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.csproj.AssemblyReference.cache
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\bin\Debug\TPC-Dominio.dll
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\bin\Debug\TPC-Dominio.pdb
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.csproj.AssemblyReference.cache
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.csproj.CoreCompileInputs.cache
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.dll
+D:\Archivos de programa\Descargas\TPC-Costa-Ortiz\TPC-Dominio\obj\Debug\TPC-Dominio.pdb
